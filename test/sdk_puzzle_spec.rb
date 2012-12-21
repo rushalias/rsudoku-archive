@@ -26,17 +26,11 @@ describe SDK::Puzzle do
     [5, 1, 1, 7, 9, 4, 6, 1, 2 ], 
     [7, 1, 6, 1, 2, 1, 5, 1, 4 ]  
   ]
-  
-  def mclone(grid_to_clone)
-    z = [] 
-    grid_to_clone.each_with_index do |r,i| z << r.clone  end
-    z
-  end
 
   describe "#find_unassigned_location" do
 
     it "find a free position" do
-      puzzle = SDK::Puzzle.new(mclone(GAME_GRID))
+      puzzle = SDK::Puzzle.new(GAME_GRID)
       position = puzzle.find_unassigned_location()
       position.should_not be_nil
       position.r.should == 0
@@ -44,7 +38,7 @@ describe SDK::Puzzle do
     end
 
     it "grid is full, nothing to find" do
-      puzzle = SDK::Puzzle.new(mclone(FULL_GRID))
+      puzzle = SDK::Puzzle.new(FULL_GRID)
       position = puzzle.find_unassigned_location()
       position.should be_nil
     end
@@ -53,7 +47,7 @@ describe SDK::Puzzle do
 
   describe "#solved?" do
     it "should return true on solvable puzzles" do 
-      puzzle = SDK::Puzzle.new(mclone(GAME_GRID))
+      puzzle = SDK::Puzzle.new(GAME_GRID)
       puzzle.solve_back
       puzzle.solved?.should == true
     end
@@ -71,19 +65,19 @@ describe SDK::Puzzle do
   describe "#check_row" do
     
     it "return ture for acceptible value" do
-      puzzle = SDK::Puzzle.new(mclone(GAME_GRID))
+      puzzle = SDK::Puzzle.new(GAME_GRID)
       position = SDK::Position.new(0,7)
       puzzle.check_row(position,9).should  ==  true
     end
     
     it "return false for value already in the row" do
-      puzzle = SDK::Puzzle.new(mclone(GAME_GRID))
+      puzzle = SDK::Puzzle.new(GAME_GRID)
       position = SDK::Position.new(0,0)
       puzzle.check_row(position,5).should  ==  false 
     end
 
     it "raise error for invalid input" do
-      puzzle = SDK::Puzzle.new(mclone(GAME_GRID))
+      puzzle = SDK::Puzzle.new(GAME_GRID)
       position = SDK::Position.new(0,0)
       expect{ puzzle.check_row(position,99) }.to raise_error()
     end
@@ -93,19 +87,19 @@ describe SDK::Puzzle do
   describe "#check_column" do
     
     it "return ture for acceptible value" do
-      puzzle = SDK::Puzzle.new(mclone(GAME_GRID))
+      puzzle = SDK::Puzzle.new(GAME_GRID)
       position = SDK::Position.new(0,5)
       puzzle.check_column(position,3).should  ==  true 
     end
     
     it "return false for value already in the column" do
-      puzzle = SDK::Puzzle.new(mclone(GAME_GRID))
+      puzzle = SDK::Puzzle.new(GAME_GRID)
       position = SDK::Position.new(0,5)
       puzzle.check_column(position,2).should  ==  false 
     end
 
     it "raise error for invalid input" do
-      puzzle = SDK::Puzzle.new(mclone(GAME_GRID))
+      puzzle = SDK::Puzzle.new(GAME_GRID)
       position = SDK::Position.new(0,5)
       expect{ puzzle.check_column(position,99) }.to raise_error()
     end
@@ -117,7 +111,7 @@ describe SDK::Puzzle do
     # 0, 6, 0
     # 9, 0, 8
     it "return ture for acceptible value in (1,1)" do
-      puzzle = SDK::Puzzle.new(mclone(GAME_GRID))
+      puzzle = SDK::Puzzle.new(GAME_GRID)
       (0..2).each do |r|
         (0..2).each do |c|
           position = SDK::Position.new(r,c)
@@ -130,7 +124,7 @@ describe SDK::Puzzle do
     # 0, 6, 0
     # 9, 0, 8
     it "return false for invalid value in (1,1) box" do
-      puzzle = SDK::Puzzle.new(mclone(GAME_GRID))
+      puzzle = SDK::Puzzle.new(GAME_GRID)
       position = SDK::Position.new(2,2)
       puzzle.check_box(position,4).should  ==  false 
     end
@@ -139,7 +133,7 @@ describe SDK::Puzzle do
     # 6, 1, 2
     # 5, 0, 4
     it "return ture for acceptible value in (7,7)" do
-      puzzle = SDK::Puzzle.new(mclone(GAME_GRID))
+      puzzle = SDK::Puzzle.new(GAME_GRID)
       (6..8).each do |r|
         (6..8).each do |c|
           position = SDK::Position.new(r,c)
@@ -152,7 +146,7 @@ describe SDK::Puzzle do
     # 6, 1, 2
     # 5, 0, 4
     it "return false for invalid value in (7,7) box" do
-      puzzle = SDK::Puzzle.new(mclone(GAME_GRID))
+      puzzle = SDK::Puzzle.new(GAME_GRID)
       position = SDK::Position.new(8,8)
       puzzle.check_box(position,9).should  equal  false 
     end

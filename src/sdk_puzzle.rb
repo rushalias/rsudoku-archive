@@ -6,7 +6,13 @@ module SDK
 
 class Puzzle
 
- def initialize (board) @board = board end
+  def mclone(grid_to_clone)
+    z = [] 
+    grid_to_clone.each_with_index do |r,i| z << r.clone  end
+    z
+  end
+
+ def initialize (board) @board = mclone(board) end
 
 	def solved?
 		find_unassigned_location == nil
