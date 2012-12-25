@@ -12,7 +12,7 @@ class Puzzle
     z
   end
 
- def initialize (board) @board = mclone(board) end
+ def initialize (board) @board = mclone(board); @counter = 0 end
 
 	def solved?
 		find_unassigned_location == nil
@@ -39,7 +39,9 @@ class Puzzle
 		@board[position.r][position.c] = value
 	end
 
-	def solve_back
+	def solve_back( )
+	  @counter = @counter + 1
+	  puts @counter if (@counter % 1000000 == 0) 
 		# check to see if we are done
 		position = find_unassigned_location
 		return true unless position != nil
