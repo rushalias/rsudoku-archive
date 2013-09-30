@@ -62,45 +62,7 @@ puzzle.solve_back
 puts "solved => #{solved}"
 puzzle.display_board
 t1 = Time.now
-puts "Solved by @ #{t1} in #{t1 - t0} seconds"
-
-
-
-t0 = Time.now
-puts "Start solving hardest puzzle @ #{t0}"
-puzzle = SDK::Puzzle.new(
-[
-[0, 0, 0, 0, 0, 0, 0, 1, 0 ],
-[0, 0, 0, 0, 0, 2, 0, 0, 3 ],
-[0, 0, 0, 4, 0, 0, 0, 0, 0 ],
-[0, 0, 0, 0, 0, 0, 5, 0, 0 ],
-[4, 0, 1, 6, 0, 0, 0, 0, 0 ],
-[0, 0, 7, 1, 0, 0, 0, 3, 0 ],
-[0, 5, 0, 0, 0, 0, 2, 0, 0 ],
-[0, 0, 0, 0, 8, 0, 0, 4, 0 ],
-[0, 3, 0, 9, 1, 0, 0, 0, 0 ],
-] )
-
-
-puzzle = SDK::Puzzle.new(
-[
-[0, 0, 0, 0, 0, 0, 0, 1, 0 ],
-[0, 0, 0, 0, 0, 2, 0, 0, 3 ],
-[0, 0, 0, 4, 0, 0, 0, 0, 0 ],
-[0, 0, 0, 0, 0, 0, 5, 0, 0 ],
-[4, 0, 1, 6, 0, 0, 0, 0, 0 ],
-[0, 0, 7, 1, 0, 0, 0, 0, 0 ],
-[0, 5, 0, 0, 0, 0, 2, 0, 0 ],
-[0, 0, 0, 0, 8, 0, 0, 4, 0 ],
-[0, 3, 0, 9, 1, 0, 0, 0, 0 ],
-] )
-puzzle.display_board
-puzzle.solve_back
-puts "solved => #{solved}"
-puzzle.display_board
-t1 = Time.now
-puts "Solved by @ #{t1} in #{t1 - t0} seconds"
-
+puts "Solved by @ #{t1} in #{t1 - t0} seconds, nodes = #{puzzle.counter}"
 
 end 
 
