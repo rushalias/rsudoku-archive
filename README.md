@@ -3,7 +3,6 @@ rsudoku
 
 Simple sudoku solver in ruby, main point of this excersise was to have fun with rspec.
 
-Temp text
 
 002 Temp text 002
 
