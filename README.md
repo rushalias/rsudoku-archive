@@ -1,0 +1,4 @@
+rsudoku
+=======
+
+fun with rspec

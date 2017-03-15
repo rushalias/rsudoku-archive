@@ -1,0 +1,116 @@
+{
+    "examples": [
+        {
+            "description": "find a free position", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#find_unassigned_location find a free position", 
+            "line_number": 38, 
+            "status": "passed"
+        }, 
+        {
+            "description": "grid is full, nothing to find", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#find_unassigned_location grid is full, nothing to find", 
+            "line_number": 46, 
+            "status": "passed"
+        }, 
+        {
+            "description": "should return true on solvable puzzles", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#solved? should return true on solvable puzzles", 
+            "line_number": 55, 
+            "status": "passed"
+        }, 
+        {
+            "description": "should return false on unsolvable puzzles", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#solved? should return false on unsolvable puzzles", 
+            "line_number": 61, 
+            "status": "passed"
+        }, 
+        {
+            "description": "return ture for acceptible value", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#check_row return ture for acceptible value", 
+            "line_number": 73, 
+            "status": "passed"
+        }, 
+        {
+            "description": "return false for value already in the row", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#check_row return false for value already in the row", 
+            "line_number": 79, 
+            "status": "passed"
+        }, 
+        {
+            "description": "raise error for invalid input", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#check_row raise error for invalid input", 
+            "line_number": 85, 
+            "status": "passed"
+        }, 
+        {
+            "description": "return ture for acceptible value", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#check_column return ture for acceptible value", 
+            "line_number": 95, 
+            "status": "passed"
+        }, 
+        {
+            "description": "return false for value already in the column", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#check_column return false for value already in the column", 
+            "line_number": 101, 
+            "status": "passed"
+        }, 
+        {
+            "description": "raise error for invalid input", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#check_column raise error for invalid input", 
+            "line_number": 107, 
+            "status": "passed"
+        }, 
+        {
+            "description": "return ture for acceptible value in (1,1)", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#check_box return ture for acceptible value in (1,1)", 
+            "line_number": 119, 
+            "status": "passed"
+        }, 
+        {
+            "description": "return false for invalid value in (1,1) box", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#check_box return false for invalid value in (1,1) box", 
+            "line_number": 132, 
+            "status": "passed"
+        }, 
+        {
+            "description": "return ture for acceptible value in (7,7)", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#check_box return ture for acceptible value in (7,7)", 
+            "line_number": 141, 
+            "status": "passed"
+        }, 
+        {
+            "description": "return false for invalid value in (7,7) box", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#check_box return false for invalid value in (7,7) box", 
+            "line_number": 154, 
+            "status": "passed"
+        }, 
+        {
+            "description": "this will be done", 
+            "file_path": "./sdk_puzzle_spec.rb", 
+            "full_description": "SDK::Puzzle#solve this will be done", 
+            "line_number": 163, 
+            "status": "pending"
+        }
+    ], 
+    "summary": {
+        "duration": 0.006736, 
+        "example_count": 15, 
+        "failure_count": 0, 
+        "pending_count": 1
+    }, 
+    "summary_line": "15 examples, 0 failures, 1 pending"
+}
