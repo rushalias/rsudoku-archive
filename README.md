@@ -24,3 +24,5 @@ Run app
 Reports
 -------
 * see reports direcetory
+
+@copyright LAT corp 2017
